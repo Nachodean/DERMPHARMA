@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FA"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="24dp"
+        android:gravity="center_vertical"
+        android:background="#FFFFFF"
+        android:elevation="4dp">
+
+        <ImageView
+            android:id="@+id/btn_volver_test"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@android:drawable/ic_menu_revert"
+            app:tint="#1565C0"
+            android:layout_marginEnd="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test Dermatológico"
+            android:textColor="#202124"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1- Tu piel al tacto, es..." android:textSize="20sp" android:textStyle="bold" android:textColor="#202124" android:layout_marginBottom="16dp"/>
+            <RadioGroup android:id="@+id/rg_q1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="32dp">
+                <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content" android:text="A) Gruesa y untuosa." android:textSize="16sp" android:layout_marginBottom="8dp" android:background="#FFFFFF" android:padding="16dp"/>
+                <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content" android:text="B) Brillante central, más seca en mejillas." android:textSize="16sp" android:layout_marginBottom="8dp" android:background="#FFFFFF" android:padding="16dp"/>
+                <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content" android:text="C) Fina y suave." android:textSize="16sp" android:background="#FFFFFF" android:padding="16dp"/>
+            </RadioGroup>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2- ¿Tienes la piel brillante?" android:textSize="20sp" android:textStyle="bold" android:textColor="#202124" android:layout_marginBottom="16dp"/>
+            <RadioGroup android:id="@+id/rg_q2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="32dp">
+                <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content" android:text="A) Siempre." android:textSize="16sp" android:layout_marginBottom="8dp" android:background="#FFFFFF" android:padding="16dp"/>
+                <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content" android:text="B) A veces, en frente, nariz y barbilla." android:textSize="16sp" android:layout_marginBottom="8dp" android:background="#FFFFFF" android:padding="16dp"/>
+                <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content" android:text="C) Nunca." android:textSize="16sp" android:background="#FFFFFF" android:padding="16dp"/>
+            </RadioGroup>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3- ¿De qué tono tienes la piel?" android:textSize="20sp" android:textStyle="bold" android:textColor="#202124" android:layout_marginBottom="16dp"/>
+            <RadioGroup android:id="@+id/rg_q3" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="32dp">
+                <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content" android:text="A) Más bien oscuro o aceitunado." android:textSize="16sp" android:layout_marginBottom="8dp" android:background="#FFFFFF" android:padding="16dp"/>
+                <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content" android:text="B) Ni clara ni oscura." android:textSize="16sp" android:layout_marginBottom="8dp" android:background="#FFFFFF" android:padding="16dp"/>
+                <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content" android:text="C) Bastante clara o muy blanca." android:textSize="16sp" android:background="#FFFFFF" android:padding="16dp"/>
+            </RadioGroup>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="4- ¿Sueles tener granitos?" android:textSize="20sp" android:textStyle="bold" android:textColor="#202124" android:layout_marginBottom="16dp"/>
+            <RadioGroup android:id="@+id/rg_q4" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="32dp">
+                <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content" android:text="A) Siempre." android:textSize="16sp" android:layout_marginBottom="8dp" android:background="#FFFFFF" android:padding="16dp"/>
+                <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content" android:text="B) En ocasiones." android:textSize="16sp" android:layout_marginBottom="8dp" android:background="#FFFFFF" android:padding="16dp"/>
+                <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content" android:text="C) Casi nunca." android:textSize="16sp" android:background="#FFFFFF" android:padding="16dp"/>
+            </RadioGroup>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5- ¿Enrojece con facilidad?" android:textSize="20sp" android:textStyle="bold" android:textColor="#202124" android:layout_marginBottom="16dp"/>
+            <RadioGroup android:id="@+id/rg_q5" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="32dp">
+                <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content" android:text="A) No." android:textSize="16sp" android:layout_marginBottom="8dp" android:background="#FFFFFF" android:padding="16dp"/>
+                <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content" android:text="B) A veces." android:textSize="16sp" android:layout_marginBottom="8dp" android:background="#FFFFFF" android:padding="16dp"/>
+                <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content" android:text="C) Siempre." android:textSize="16sp" android:background="#FFFFFF" android:padding="16dp"/>
+            </RadioGroup>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="6- ¿Suele irritarse?" android:textSize="20sp" android:textStyle="bold" android:textColor="#202124" android:layout_marginBottom="16dp"/>
+            <RadioGroup android:id="@+id/rg_q6" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="32dp">
+                <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content" android:text="A) Casi nunca." android:textSize="16sp" android:layout_marginBottom="8dp" android:background="#FFFFFF" android:padding="16dp"/>
+                <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content" android:text="B) A veces." android:textSize="16sp" android:layout_marginBottom="8dp" android:background="#FFFFFF" android:padding="16dp"/>
+                <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content" android:text="C) En muchas ocasiones." android:textSize="16sp" android:background="#FFFFFF" android:padding="16dp"/>
+            </RadioGroup>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="7- ¿Notas tirantez o sequedad?" android:textSize="20sp" android:textStyle="bold" android:textColor="#202124" android:layout_marginBottom="16dp"/>
+            <RadioGroup android:id="@+id/rg_q7" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="32dp">
+                <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content" android:text="A) Nunca." android:textSize="16sp" android:layout_marginBottom="8dp" android:background="#FFFFFF" android:padding="16dp"/>
+                <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content" android:text="B) A veces, más en invierno." android:textSize="16sp" android:layout_marginBottom="8dp" android:background="#FFFFFF" android:padding="16dp"/>
+                <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content" android:text="C) Casi siempre." android:textSize="16sp" android:background="#FFFFFF" android:padding="16dp"/>
+            </RadioGroup>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="8- ¿Tienes poros abiertos?" android:textSize="20sp" android:textStyle="bold" android:textColor="#202124" android:layout_marginBottom="16dp"/>
+            <RadioGroup android:id="@+id/rg_q8" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="32dp">
+                <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content" android:text="A) Sí, suelo tenerlos." android:textSize="16sp" android:layout_marginBottom="8dp" android:background="#FFFFFF" android:padding="16dp"/>
+                <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content" android:text="B) A veces, en la nariz y la barbilla." android:textSize="16sp" android:layout_marginBottom="8dp" android:background="#FFFFFF" android:padding="16dp"/>
+                <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content" android:text="C) No." android:textSize="16sp" android:background="#FFFFFF" android:padding="16dp"/>
+            </RadioGroup>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="9- ¿Tu piel presenta couperosis (venitas capilares)?" android:textSize="20sp" android:textStyle="bold" android:textColor="#202124" android:layout_marginBottom="16dp"/>
+            <RadioGroup android:id="@+id/rg_q9" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="32dp">
+                <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content" android:text="A) No." android:textSize="16sp" android:layout_marginBottom="8dp" android:background="#FFFFFF" android:padding="16dp"/>
+                <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content" android:text="B) En muy raras ocasiones." android:textSize="16sp" android:layout_marginBottom="8dp" android:background="#FFFFFF" android:padding="16dp"/>
+                <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content" android:text="C) Muchas veces." android:textSize="16sp" android:background="#FFFFFF" android:padding="16dp"/>
+            </RadioGroup>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10- ¿Has tenido alergia con cosméticos?" android:textSize="20sp" android:textStyle="bold" android:textColor="#202124" android:layout_marginBottom="16dp"/>
+            <RadioGroup android:id="@+id/rg_q10" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="32dp">
+                <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content" android:text="A) No." android:textSize="16sp" android:layout_marginBottom="8dp" android:background="#FFFFFF" android:padding="16dp"/>
+                <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content" android:text="B) Alguna vez, con muy concentrados." android:textSize="16sp" android:layout_marginBottom="8dp" android:background="#FFFFFF" android:padding="16dp"/>
+                <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content" android:text="C) Muchas veces." android:textSize="16sp" android:background="#FFFFFF" android:padding="16dp"/>
+            </RadioGroup>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="¿Quieres añadir algo más?" android:textSize="20sp" android:textStyle="bold" android:textColor="#202124" android:layout_marginBottom="16dp"/>
+            <EditText android:id="@+id/et_sintomas_extra" android:layout_width="match_parent" android:layout_height="150dp" android:background="#FFFFFF" android:gravity="top|start" android:hint="(Opcional) Ej: Estoy usando la crema X y me pica al aplicarla..." android:padding="16dp" android:layout_marginBottom="16dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="#FFFFFF"
+        android:elevation="8dp">
+
+        <Button
+            android:id="@+id/btn_enviar_formulario"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="ENVIAR ANÁLISIS"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#1565C0"
+            android:textStyle="bold"
+            app:cornerRadius="12dp"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.tfg">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TFG">
+        <activity
+            android:name=".Activities.Farmaceutico.Anadir_Producto_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Farmaceutico.Historial_Paciente_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Farmaceutico.Catalogo_Productos_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Farmaceutico.Pacientes_Farmaceutico_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Farmaceutico.Detalle_Consulta"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Farmaceutico.Consultas_Farmaceutico_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Farmaceutico.Citas_Farmaceutico_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Farmaceutico.Inicio_Farmaceutico_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Cliente.Detalle_Receta_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Cliente.Historial_Cliente_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Cliente.Citas_Cliente_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Cliente.FormularioPiel_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Cliente.InicioCliente_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Login_Activity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

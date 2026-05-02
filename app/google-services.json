@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "466709052466",
+    "project_id": "dermapharma",
+    "storage_bucket": "dermapharma.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:466709052466:android:1ccf38ab4db6db39dc902b",
+        "android_client_info": {
+          "package_name": "com.example.tfg"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAD2qtMQTBHKsLzt_1sElbN60gVxOWOs4k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
