@@ -91,7 +91,7 @@ public class Detalle_Consulta extends AppCompatActivity {
         spinner.setAdapter(adapter);
     }
 
-    // --- GETTERS PARA QUE EL CONTROLADOR LEA LOS DATOS (Sin atajos) ---
+    // --- GETTERS PARA QUE EL CONTROLADOR LEA LOS DATOS --
     public String getValoracion() {
         return etValoracion.getText().toString().trim();
     }
