@@ -68,7 +68,7 @@ public class Controlador_Detalle_Consulta implements View.OnClickListener {
                             
                             switch (categoria.toLowerCase()) {
                                 case "limpiador":
-                                case "limpieza": // Añado ambas por si en tu BD usas "limpieza"
+                                case "limpieza":
                                     limpiadores.add(nombre);
                                     break;
                                 case "hidratacion": // 2. CAMBIO AQUÍ: Coincide con tu BD
