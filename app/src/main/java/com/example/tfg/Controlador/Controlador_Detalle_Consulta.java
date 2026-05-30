@@ -65,7 +65,7 @@ public class Controlador_Detalle_Consulta implements View.OnClickListener {
                         String categoria = producto.getCategoria();
 
                         if (categoria != null && nombre != null) {
-                            // Lo pasamos a minúsculas para evitar fallos si un día escribes "Hidratacion" o "hidratacion"
+                            
                             switch (categoria.toLowerCase()) {
                                 case "limpiador":
                                 case "limpieza": // Añado ambas por si en tu BD usas "limpieza"
