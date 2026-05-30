@@ -58,14 +58,14 @@ public class Controlador_Detalle_Consulta implements View.OnClickListener {
                     protectores.add("Seleccionar Protección");
 
                     for (QueryDocumentSnapshot document : task.getResult()) {
-                        // Usamos tu modelo directamente para sacar los datos
+                        
                         Producto_Modelo producto = document.toObject(Producto_Modelo.class);
 
                         String nombre = producto.getNombre();
                         String categoria = producto.getCategoria();
 
                         if (categoria != null && nombre != null) {
-                            
+
                             switch (categoria.toLowerCase()) {
                                 case "limpiador":
                                 case "limpieza":
