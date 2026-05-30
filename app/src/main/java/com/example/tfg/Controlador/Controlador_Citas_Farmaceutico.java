@@ -67,6 +67,15 @@ public class Controlador_Citas_Farmaceutico implements View.OnClickListener {
                 });
     }
 
+    private boolean citaHaPasado(String fecha) {
+        try {
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/M/yyyy", Locale.getDefault());
+            return sdf.parse(fecha).before(new Date());
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
     private void buscarCorreoYNotificar(final Cita_Modelo cita, final List<Cita_Modelo> lista, final int total) {
         if (cita.getPaciente_id() != null) {
             db.collection("Usuarios").document(cita.getPaciente_id()).get()
