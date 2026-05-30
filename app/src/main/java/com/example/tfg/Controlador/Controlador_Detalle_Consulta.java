@@ -71,7 +71,7 @@ public class Controlador_Detalle_Consulta implements View.OnClickListener {
                                 case "limpieza":
                                     limpiadores.add(nombre);
                                     break;
-                                case "hidratacion": // 2. CAMBIO AQUÍ: Coincide con tu BD
+                                case "hidratacion":
                                     hidratantes.add(nombre);
                                     break;
                                 case "tratamiento":
