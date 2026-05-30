@@ -95,7 +95,13 @@ public class Controlador_Citas_Farmaceutico implements View.OnClickListener {
                             }
                             lista.add(cita);
                             if (lista.size() == total) {
-                                vista.pintarCitas(lista);
+                                List<Cita_Modelo> listaFiltrada = new ArrayList<>();
+                                for (Cita_Modelo c : lista) {
+                                    if (!citaHaPasado(c.getFecha())) {
+                                        listaFiltrada.add(c);
+                                    }
+                                }
+                                vista.pintarCitas(listaFiltrada);
                             }
                         }
                     });
