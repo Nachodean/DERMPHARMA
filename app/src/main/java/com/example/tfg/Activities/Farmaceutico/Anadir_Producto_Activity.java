@@ -36,8 +36,17 @@ public class Anadir_Producto_Activity extends AppCompatActivity {
         });
 
         recogerElementos();
+        establecerAdaptadores();
         establecerEscuchadores();
 
+
+    }
+
+    private void establecerAdaptadores() {
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
+                android.R.layout.simple_spinner_dropdown_item,
+                controlador.obtenerCategorias());
+        spCategoria.setAdapter(adapter);
     }
 
     private void recogerElementos() {
@@ -47,10 +56,7 @@ public class Anadir_Producto_Activity extends AppCompatActivity {
         spCategoria = findViewById(R.id.sp_categoria_nuevo_prod);
         btnGuardar = findViewById(R.id.btn_guardar_nuevo_prod);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
-                android.R.layout.simple_spinner_dropdown_item,
-                controlador.obtenerCategorias());
-        spCategoria.setAdapter(adapter);
+
 
     }
 

@@ -42,7 +42,7 @@ public class Controlador_Detalle_Consulta implements View.OnClickListener {
     }
 
     private void cargarProductos() {
-        // 1. CAMBIO AQUÍ: La colección empieza con mayúscula "Productos"
+
         db.collection("Productos").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
@@ -58,7 +58,7 @@ public class Controlador_Detalle_Consulta implements View.OnClickListener {
                     protectores.add("Seleccionar Protección");
 
                     for (QueryDocumentSnapshot document : task.getResult()) {
-                        
+
                         Producto_Modelo producto = document.toObject(Producto_Modelo.class);
 
                         String nombre = producto.getNombre();

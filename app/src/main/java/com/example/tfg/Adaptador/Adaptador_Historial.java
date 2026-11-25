@@ -68,7 +68,7 @@ public class Adaptador_Historial extends BaseAdapter {
 
 
                 holder.tv_tarjeta_titulo.setText("RESPONDIDA");
-                holder.tv_tarjeta_titulo.setTextColor(Color.parseColor("#388E3C")); // Verde
+                holder.tv_tarjeta_titulo.setTextColor(Color.parseColor("#388E3C"));
 
                 String valoracion = consulta.getValoracion_clinica();
                 if (valoracion != null && !valoracion.isEmpty()) {
@@ -81,7 +81,7 @@ public class Adaptador_Historial extends BaseAdapter {
 
 
                 holder.tv_tarjeta_titulo.setText("PENDIENTE");
-                holder.tv_tarjeta_titulo.setTextColor(Color.parseColor("#F57C00")); // Naranja
+                holder.tv_tarjeta_titulo.setTextColor(Color.parseColor("#F57C00"));
                 holder.tv_tarjeta_descripcion.setText("Esperando diagnóstico del farmacéutico.");
 
             }

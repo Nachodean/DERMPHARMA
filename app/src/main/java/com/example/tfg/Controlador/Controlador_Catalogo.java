@@ -7,6 +7,7 @@ import androidx.annotation.Nullable;
 import com.example.tfg.Activities.Farmaceutico.Catalogo_Productos_Activity;
 import com.example.tfg.Modelos.Producto_Modelo;
 import com.example.tfg.R;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
@@ -20,10 +21,12 @@ public class Controlador_Catalogo implements View.OnClickListener {
 
     private Catalogo_Productos_Activity vista;
     private FirebaseFirestore db;
+    private FirebaseAuth mAuth;
 
     public Controlador_Catalogo(Catalogo_Productos_Activity vista) {
         this.vista = vista;
         this.db = FirebaseFirestore.getInstance();
+        this.mAuth = FirebaseAuth.getInstance();
     }
 
     @Override
@@ -42,6 +45,7 @@ public class Controlador_Catalogo implements View.OnClickListener {
         db.collection("Productos").addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
             public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
+                if (mAuth.getCurrentUser() == null) return;
                 if (error != null) {
                     vista.mostrarMensaje("Error al escuchar cambios: " + error.getMessage());
                     return;

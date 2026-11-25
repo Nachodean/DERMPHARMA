@@ -50,8 +50,8 @@ public class Adaptador_Citas_Farma extends BaseAdapter {
             view = LayoutInflater.from(activity).inflate(layout, null);
             holder = new ViewHolder();
             holder.tvHora = view.findViewById(R.id.tv_item_hora);
-            holder.tvFranja = view.findViewById(R.id.tv_item_franja); // Aquí irá la fecha
-            holder.tvNombre = view.findViewById(R.id.tv_item_nombre_paciente); // Aquí el correo
+            holder.tvFranja = view.findViewById(R.id.tv_item_franja);
+            holder.tvNombre = view.findViewById(R.id.tv_item_nombre_paciente);
             holder.tvMotivo = view.findViewById(R.id.tv_item_motivo);
             holder.btnVerFicha = view.findViewById(R.id.btn_item_ver_ficha);
             view.setTag(holder);

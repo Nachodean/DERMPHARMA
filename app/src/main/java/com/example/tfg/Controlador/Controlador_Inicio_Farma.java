@@ -65,7 +65,7 @@ public class Controlador_Inicio_Farma implements View.OnClickListener {
                     @Override
                     public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
                         if (error == null && value != null) {
-
+                            if (mAuth.getCurrentUser() == null) return;
                             int total = value.size();
                             vista.actualizarContador(total);
                         }

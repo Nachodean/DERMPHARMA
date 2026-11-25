@@ -17,8 +17,11 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 public class Controlador_Citas_Farmaceutico implements View.OnClickListener {
 
@@ -76,7 +79,12 @@ public class Controlador_Citas_Farmaceutico implements View.OnClickListener {
     private boolean citaHaPasado(String fecha) {
         try {
             SimpleDateFormat sdf = new SimpleDateFormat("dd/M/yyyy", Locale.getDefault());
-            return sdf.parse(fecha).before(new Date());
+            Date fechaCita = sdf.parse(fecha);
+
+            String hoyTexto = sdf.format(new Date());
+            Date hoy = sdf.parse(hoyTexto);
+
+            return fechaCita.before(hoy);
         } catch (Exception e) {
             return false;
         }

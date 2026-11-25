@@ -8,6 +8,7 @@ import androidx.annotation.Nullable;
 import com.example.tfg.Activities.Farmaceutico.Consultas_Farmaceutico_Activity;
 import com.example.tfg.Modelos.Consulta_Modelo;
 import com.example.tfg.R;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -22,6 +23,7 @@ public class Controlador_Consulta_Farmaceutico implements AdapterView.OnItemClic
 
     private Consultas_Farmaceutico_Activity vista;
     private FirebaseFirestore db;
+    private FirebaseAuth mAuth;
 
 
     private List<Consulta_Modelo> listaConsultas;
@@ -30,6 +32,7 @@ public class Controlador_Consulta_Farmaceutico implements AdapterView.OnItemClic
     public Controlador_Consulta_Farmaceutico(Consultas_Farmaceutico_Activity vista) {
         this.vista = vista;
         this.db = FirebaseFirestore.getInstance();
+        this.mAuth = FirebaseAuth.getInstance();
         this.listaConsultas = new ArrayList<>();
         this.listaIds = new ArrayList<>();
     }
@@ -41,6 +44,7 @@ public class Controlador_Consulta_Farmaceutico implements AdapterView.OnItemClic
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
                     @Override
                     public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
+                        if (mAuth.getCurrentUser() == null) return;
                         if (error != null) {
                             vista.mostrarMensaje("Error al leer datos: " + error.getMessage());
                             return;

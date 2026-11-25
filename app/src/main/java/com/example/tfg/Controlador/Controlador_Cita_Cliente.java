@@ -93,7 +93,7 @@ public class Controlador_Cita_Cliente implements View.OnClickListener {
                     public void onSuccess(DocumentSnapshot documentSnapshot) {
                         String nombreUsuario = "Usuario";
                         if (documentSnapshot.exists()) {
-                        
+
                             nombreUsuario = documentSnapshot.getString("correo");
                         }
                         enviarCitaAFirebase(nombreUsuario, uid, fecha, hora);

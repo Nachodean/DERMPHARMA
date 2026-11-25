@@ -71,7 +71,7 @@ public class Detalle_Consulta extends AppCompatActivity {
         btnVolver = findViewById(R.id.btn_volver);
     }
 
-    // Métodos para rellenar los Spinners sin tocar el onCreate
+    // Métodos para rellenar los Spinners
     public void setListaLimpieza(List<String> items) {
         configurarSpinner(spLimpieza, items);
     }
